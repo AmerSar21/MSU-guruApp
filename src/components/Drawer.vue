@@ -29,15 +29,15 @@ export default {
       leftDrawer: false,
       menuList: [
         {
-          label: "Home",
-          icon: "home",
-          router: "/home-user",
-        },
-        {
           label: "Profile",
           icon: "person",
           router: "/profile",
         },
+        {
+          label: "Consultation",
+          icon: "",
+          router: "",
+        }       
       ],
 
       user: {
