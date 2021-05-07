@@ -1,5 +1,5 @@
 <template>
-  <q-drawer v-model="leftDrawer" content-class="bg-grey-3" @hide="shouldHide()">
+  <q-drawer v-model="leftDrawer" content-class="bg-grey-3" @hide="shouldHide()" behavior="mobile">
     <q-list>
       <div class="text-center q-py-xl text-h4">Menu</div>
       <template v-for="(menuItem, index) in menuList">
@@ -35,7 +35,7 @@ export default {
         },
         {
           label: "Consultation",
-          icon: "",
+          icon: "list",
           router: "",
         }       
       ],
