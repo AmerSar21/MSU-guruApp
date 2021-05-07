@@ -18,6 +18,7 @@
               size="12px"
               to="/"
               flat
+              @click="hideDrawer()"
             ></q-btn>
           </q-menu>
         </q-btn>

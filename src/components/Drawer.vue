@@ -39,7 +39,7 @@ export default {
           router: "/profile",
         },
       ],
-      
+
       user: {
         type: "admin",
       },
