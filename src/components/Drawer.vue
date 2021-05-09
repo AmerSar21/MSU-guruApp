@@ -1,7 +1,7 @@
 <template>
   <q-drawer v-model="leftDrawer" content-class="bg-grey-3" @hide="shouldHide()" behavior="mobile">
     <q-list>
-      <div class="text-center q-py-xl text-h4">Menu</div>
+      <div class="text-center q-py-xl text-h4"><b>Guru</b>App</div>
       <template v-for="(menuItem, index) in menuList">
         <q-item
           :key="index"
@@ -29,12 +29,22 @@ export default {
       leftDrawer: false,
       menuList: [
         {
+          label: "Home",
+          icon: "home",
+          router: "/home-user",
+        },
+        {
           label: "Profile",
           icon: "person",
           router: "/profile",
         },
         {
           label: "Consultation",
+          icon: "mail",
+          router: "",
+        },
+        {
+          label: "Tasks",
           icon: "list",
           router: "",
         }       
