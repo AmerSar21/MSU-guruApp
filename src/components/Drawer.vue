@@ -41,12 +41,12 @@ export default {
         {
           label: "Consultation",
           icon: "mail",
-          router: "",
+          router: "/consultation",
         },
         {
           label: "Tasks",
           icon: "list",
-          router: "",
+          router: "/faculty-task",
         }       
       ],
 
