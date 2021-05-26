@@ -69,7 +69,7 @@
         <div class="row no-wrap">
           <q-toolbar class="col-8">
             <q-btn flat round dense icon="menu" @click="isDrawer = !isDrawer" />
-            <q-toolbar-title><b>Guru</b>App</q-toolbar-title>
+            <q-toolbar-title><b>Guro</b>App</q-toolbar-title>
             <q-btn flat round dense icon="search" />
           </q-toolbar>
           <q-toolbar class="col-4 bg-primary text-white">
