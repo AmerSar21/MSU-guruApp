@@ -1,9 +1,9 @@
 {
   "name": "sms-system",
   "version": "0.0.1",
-  "description": "A Capstone Project",
-  "productName": "SMS System",
-  "author": "mosaab.talib09@gmail.com",
+  "description": "A ITSMarawi Project",
+  "productName": "Guru App",
+  "author": "amersarangani22@gmail.com",
   "private": true,
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
