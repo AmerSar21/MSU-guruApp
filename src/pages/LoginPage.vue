@@ -65,6 +65,8 @@ export default {
         this.$router.push("/home-user");
       } else if(this.user.username == "student" && this.user.userpass == "pass"){
         this.$router.push("/home-student");
+      }else if((this.user.username == "" && this.user.userpass == "") || (this.user.username == "" || this.user.userpass == "")){
+        alert("Complete the fields");
       }else{
         alert("Error username and password");
       }

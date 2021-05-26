@@ -1,61 +1,38 @@
 <template>
   <q-layout view="hHh Lpr lff">
     <q-header v-if="this.$route.name == 'homeadmin-page'" elevated>
-      <q-toolbar>
-        <q-btn
-          icon="menu"
-          flat
-          size="20px"
-          @click="isDrawer = !isDrawer"
-        ></q-btn>
-        <q-toolbar-title>Guru App</q-toolbar-title>
-        <q-btn icon="settings" color="white" flat>
-          <q-menu padding fit :offset="[0, 15]">
-            <q-btn
-              label="logout"
-              class="full-width"
-              text-color="red"
-              size="12px"
-              to="/"
-              flat
-              @click="hideDrawer()"
-            ></q-btn>
-          </q-menu>
-        </q-btn>
-      </q-toolbar>
+      <div class="">
+        <div class="row no-wrap">
+          <q-toolbar class="col-8">
+            <q-btn flat round dense icon="menu" @click="isDrawer = !isDrawer" />
+            <q-toolbar-title><b>Guru</b>App</q-toolbar-title>
+            <q-btn flat round dense icon="search" />
+          </q-toolbar>
+          <q-toolbar class="col-4 bg-primary text-white">
+            <q-space />
+            <q-btn flat round dense icon="assignment_ind" class="q-mr-sm" />
+            <q-btn flat round dense icon="more_vert">
+              <q-menu auto-close>
+                <q-list style="min-width: 100px">
+                  <q-item clickable>
+                    <q-item-section>Settings</q-item-section>
+                  </q-item>
+                  <q-separator dark />
+                  <q-item clickable>
+                    <q-item-section>Help &amp; Feedback</q-item-section>
+                  </q-item>
+                  <q-separator dark />
+                  <q-item clickable to="/" @click="hideDrawer()" v-close-popup>
+                    <q-item-section>Logout</q-item-section>
+                  </q-item>
+                </q-list>
+              </q-menu>
+            </q-btn>
+          </q-toolbar>
+        </div>
+      </div>
     </q-header>
     <q-header v-if="this.$route.name == 'homeuser-page'" elevated>
-      <!-- <q-toolbar>
-        <q-btn icon="menu" flat size="20px" @click="isDrawer = !isDrawer"></q-btn>
-        <q-toolbar-title>Guru App</q-toolbar-title>
-        <q-btn-dropdown color="white" flat>
-          <div class="row no-wrap q-pa-md">
-            <div class="column">
-              <div class="text-h6 q-mb-md">Settings</div>
-              <q-toggle v-model="mobileData" label="Use Mobile Data" />
-              <q-toggle v-model="bluetooth" label="Bluetooth" />
-            </div>
-
-            <q-separator vertical inset class="q-mx-lg" />
-
-            <div class="column items-center">
-              <q-avatar size="72px">
-                <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
-              </q-avatar>
-              <div class="text-subtitle1 q-mt-md q-mb-xs">John Doe</div>
-              <q-btn
-                label="logout"
-                class="full-width"
-                text-color="red"
-                to="/"
-                flat
-                @click="hideDrawer()"
-                v-close-popup
-              />
-            </div>
-          </div>
-        </q-btn-dropdown>
-      </q-toolbar> -->
       <div class="">
         <div class="row no-wrap">
           <q-toolbar class="col-8">
@@ -88,28 +65,36 @@
       </div>
     </q-header>
     <q-header v-if="this.$route.name == 'homestudent-page'" elevated>
-      <q-toolbar>
-        <q-btn
-          icon="menu"
-          flat
-          size="20px"
-          @click="isDrawer = !isDrawer"
-        ></q-btn>
-        <q-toolbar-title>Guru App</q-toolbar-title>
-        <q-btn icon="settings" color="white" flat>
-          <q-menu padding fit :offset="[0, 15]">
-            <q-btn
-              label="logout"
-              class="full-width"
-              text-color="red"
-              size="12px"
-              to="/"
-              flat
-              @click="hideDrawer()"
-            ></q-btn>
-          </q-menu>
-        </q-btn>
-      </q-toolbar>
+      <div class="">
+        <div class="row no-wrap">
+          <q-toolbar class="col-8">
+            <q-btn flat round dense icon="menu" @click="isDrawer = !isDrawer" />
+            <q-toolbar-title><b>Guru</b>App</q-toolbar-title>
+            <q-btn flat round dense icon="search" />
+          </q-toolbar>
+          <q-toolbar class="col-4 bg-primary text-white">
+            <q-space />
+            <q-btn flat round dense icon="assignment_ind" class="q-mr-sm" />
+            <q-btn flat round dense icon="more_vert">
+              <q-menu auto-close>
+                <q-list style="min-width: 100px">
+                  <q-item clickable>
+                    <q-item-section>Settings</q-item-section>
+                  </q-item>
+                  <q-separator dark />
+                  <q-item clickable>
+                    <q-item-section>Help &amp; Feedback</q-item-section>
+                  </q-item>
+                  <q-separator dark />
+                  <q-item clickable to="/" @click="hideDrawer()" v-close-popup>
+                    <q-item-section>Logout</q-item-section>
+                  </q-item>
+                </q-list>
+              </q-menu>
+            </q-btn>
+          </q-toolbar>
+        </div>
+      </div>
     </q-header>
     <Drawer :isDrawer="isDrawer" @shoudHide="hideDrawer()" />
     <q-page-container>
@@ -123,22 +108,22 @@ import Drawer from "src/components/Drawer.vue";
 export default {
   emits: ["shoudHide"],
   components: {
-    Drawer,
+    Drawer
   },
   data() {
     return {
       isDrawer: false,
       user: {
-        type: "admin",
-      },
+        type: "admin"
+      }
     };
   },
   methods: {
     hideDrawer(val) {
       console.log(val);
       this.isDrawer = val;
-    },
-  },
+    }
+  }
 };
 </script>
 
