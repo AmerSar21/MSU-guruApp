@@ -1,6 +1,8 @@
 import MainLayout from "src/layouts/MainLayout.vue";
 import LoginPage from "src/pages/LoginPage.vue";
-import HomeUserPage from "src/pages/HomeUserPage.vue"
+import HomeUserPage from "src/pages/HomeUserPage.vue";
+import HomeAdminPage from "src/pages/HomeAdminPage.vue";
+import HomeStudentPage from "src/pages/HomeStudentPage.vue";
 
 const routes = [
   {
@@ -16,6 +18,16 @@ const routes = [
         path: 'home-user',
         name: 'homeuser-page',
         component: HomeUserPage
+      },
+      {
+        path: 'home-admin',
+        name: 'homeadmin-page',
+        component: HomeAdminPage
+      },
+      {
+        path: 'home-student',
+        name: 'homestudent-page',
+        component: HomeStudentPage
       },
     ]
   },

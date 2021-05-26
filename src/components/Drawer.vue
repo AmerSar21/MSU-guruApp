@@ -2,7 +2,7 @@
   <q-drawer v-model="leftDrawer" content-class="bg-grey-3" @hide="shouldHide()" behavior="mobile">
     <q-list>
       <div class="text-center q-py-xl text-h4">Menu</div>
-      <template v-for="(menuItem, index) in menuList">
+      <template v-for="(menuItem, index) in userMenuList">
         <q-item
           :key="index"
           clickable
@@ -27,7 +27,24 @@ export default {
   data() {
     return {
       leftDrawer: false,
-      menuList: [
+      adminMenuList: [
+        {
+          label: "Profile",
+          icon: "person",
+          router: "/profile",
+        },
+        {
+          label: "Consultation",
+          icon: "list",
+          router: "",
+        },
+        {
+          label: "Task Organizer",
+          icon: "list",
+          router: "",
+        } 
+      ],
+      userMenuList: [
         {
           label: "Profile",
           icon: "person",
@@ -39,7 +56,18 @@ export default {
           router: "",
         }       
       ],
-
+      studentMenuList: [
+        {
+          label: "Home",
+          icon: "list",
+          router: "",
+        },       
+        {
+          label: "Profile",
+          icon: "person",
+          router: "/profile",
+        }
+      ],
       user: {
         type: "admin",
       },
