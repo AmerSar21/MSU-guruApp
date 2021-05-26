@@ -1,11 +1,11 @@
 <template>
   <q-page class="flex-center" padding>
-    <q-card class="bg-grey-1 q-pa-xl">
+    <q-card class="bg-grey-1 q-pa-md">
       <!-- :class="$q.screen.lt.md ? '' : 'row'" -->
       <div>
         <template v-for="(cons, index) in consultationList">
-          <q-list>
-            <q-item :key="index" clickable>
+          <q-list :key="index">
+            <q-item clickable>
               <q-item-section>
                 <q-item-label>{{ cons.header }}</q-item-label>
                 <q-item-label caption lines="2">{{
