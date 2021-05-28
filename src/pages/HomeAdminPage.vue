@@ -4,11 +4,11 @@
       <div class="text-center" :class="$q.screen.lt.md ? '' : 'row'">
         <q-card-section class="col-6">
           <h3>Card-Header</h3>
-          <p>this dashboard belongs to faculty</p>
+          <p>this dashboard belongs to Admin-faculty</p>
         </q-card-section>
         <q-card-section class="col-6">
           <h3>Card-Header 2</h3>
-          <p>this dashboard belongs to facult</p>
+          <p>this dashboard belongs to Admin-faculty</p>
         </q-card-section>
       </div>
       <q-card-actions> </q-card-actions>

@@ -1,7 +1,7 @@
 <template>
   <q-page class="flex flex-center">
     <q-card class="__card shadow-10 bg-grey-1 q-pa-lg">
-      <q-item-label class="text-center text-h3"> <b>Guru</b>App </q-item-label>
+      <q-item-label class="text-center text-h3"> <b>Guro</b>App </q-item-label>
       <q-card-section>
         <q-input
           v-model="user.username"
@@ -59,9 +59,15 @@ export default {
   },
   methods: {
     login() {
-      if (this.user.username == "amer" && this.user.userpass == "hanna") {
+      if (this.user.username == "admin" && this.user.userpass == "pass") {
+        this.$router.push("/home-admin");
+      } else if(this.user.username == "user" && this.user.userpass == "pass"){
         this.$router.push("/home-user");
-      } else {
+      } else if(this.user.username == "student" && this.user.userpass == "pass"){
+        this.$router.push("/home-student");
+      }else if((this.user.username == "" && this.user.userpass == "") || (this.user.username == "" || this.user.userpass == "")){
+        alert("Complete the fields");
+      }else{
         alert("Error username and password");
       }
     },

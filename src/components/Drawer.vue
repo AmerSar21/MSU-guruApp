@@ -1,8 +1,13 @@
 <template>
-  <q-drawer v-model="leftDrawer" content-class="bg-grey-3" @hide="shouldHide()" behavior="mobile">
+  <q-drawer
+    v-model="leftDrawer"
+    content-class="bg-grey-3"
+    @hide="shouldHide()"
+    behavior="mobile"
+  >
     <q-list>
-      <div class="text-center q-py-xl text-h4"><b>Guru</b>App</div>
-      <template v-for="(menuItem, index) in menuList">
+      <div class="text-center q-py-xl text-h4">Menu</div>
+      <template v-for="(menuItem, index) in userMenuList">
         <q-item
           :key="index"
           clickable
@@ -27,43 +32,61 @@ export default {
   data() {
     return {
       leftDrawer: false,
-      menuList: [
+      adminMenuList: [
+        {
+          label: "Profile",
+          icon: "person",
+          router: "/profile"
+        },
+        {
+          label: "Consultation",
+          icon: "list",
+          router: ""
+        },
+        {
+          label: "Task Organizer",
+          icon: "list",
+          router: ""
+        }
+      ],
+      userMenuList: [
+        {
+          label: "Profile",
+          icon: "person",
+          router: "/profile"
+        },
+        {
+          label: "Consultation",
+          icon: "list",
+          router: ""
+        }
+      ],
+      studentMenuList: [
         {
           label: "Home",
-          icon: "home",
-          router: "/home-user",
+          icon: "list",
+          router: ""
         },
         {
           label: "Profile",
           icon: "person",
-          router: "/profile",
-        },
-        {
-          label: "Consultation",
-          icon: "mail",
-          router: "/consultation",
-        },
-        {
-          label: "Tasks",
-          icon: "list",
-          router: "/faculty-task",
-        }       
+          router: "/profile"
+        }
       ],
-
       user: {
-        type: "admin",
-      },
+        type: "admin"
+      }
     };
   },
   watch: {
-    isDrawer: function (val) {
+    isDrawer: function(val) {
       this.leftDrawer = val;
-    },
+    }
   },
   methods: {
     shouldHide() {
       this.$emit("shoudHide", this.leftDrawer);
-    },
-  },
+    }
+  }
 };
 </script>
