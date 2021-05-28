@@ -11,7 +11,7 @@ const routes = [
     component: MainLayout,
     children: [
       {
-        path: '',
+        path: '/',
         name: 'login',
         component: LoginPage
       },
@@ -34,8 +34,7 @@ const routes = [
         path: 'faculty-task',
         name: 'facultytask-page',
         component: FacultyTaskPage
-      },
-      
+      }
     ]
   },
 
