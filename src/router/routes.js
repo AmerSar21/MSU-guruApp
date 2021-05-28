@@ -4,6 +4,8 @@ import HomeUserPage from "src/pages/HomeUserPage.vue";
 import HomeAdminPage from "src/pages/HomeAdminPage.vue";
 import HomeStudentPage from "src/pages/HomeStudentPage.vue";
 import ProfilePage from "src/pages/ProfilePage.vue";
+import ConsultationPage from "src/pages/ConsultationPage.vue";
+import FacultyTaskPage from "src/pages/FacultyTaskPage.vue";
 
 const routes = [
   {
@@ -11,13 +13,8 @@ const routes = [
     component: MainLayout,
     children: [
       {
-<<<<<<< HEAD
         path: '/',
         name: 'login',
-=======
-        path: '',
-        name: "login",
->>>>>>> e73d8b8c82d44940b5622fbfbb1f2d26a9e4e589
         component: LoginPage
       },
       {
@@ -36,18 +33,25 @@ const routes = [
         component: HomeStudentPage
       },
       {
-<<<<<<< HEAD
-        path: 'faculty-task',
-        name: 'facultytask-page',
-        component: FacultyTaskPage
-=======
         path: 'profile',
         name: 'profile-page',
         component: ProfilePage
->>>>>>> e73d8b8c82d44940b5622fbfbb1f2d26a9e4e589
+      },
+      {
+        path: 'consultation',
+        name: 'consultation-page',
+        component: ConsultationPage
+      },
+      {
+        path: 'faculty-task',
+        name: 'facultytask-page',
+        component: FacultyTaskPage
       }
     ]
   },
+
+  // Always leave this as last one,
+  // but you can also remove it
   {
     path: '*',
     component: () => import('pages/Error404.vue')
